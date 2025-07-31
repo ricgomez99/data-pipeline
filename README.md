@@ -34,4 +34,42 @@ simple-pipeline/
 
 ## Getting Started
 
-Instructions for setting up and running the pipeline will be added soon.
+### Prerequisites
+
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/) installed and running
+- Git installed on your system
+
+### Setup and Execution
+
+1. Clone the repository
+
+```bash
+git clone https://github.com/ricgomez99/data-pipeline.git
+cd simple-pipeline
+```
+
+2. Ensure Docker Desktop is running on your machine
+
+3. Build and run the pipeline
+
+```bash
+docker compose up --build
+```
+
+This command will:
+
+- Build the Docker image with all required dependencies
+- Create a container from the image
+- Mount the data volume
+- Execute the pipeline to process the Heart Attack Dataset
+- Store the cleaned data in the `data` directory
+
+### Expected Output
+
+After successful execution, you'll find the processed data file `CleanedMedicalData.csv` in the `data` directory.
+
+To stop the container, press `Ctrl+C` or run:
+
+```bash
+docker compose down
+```
